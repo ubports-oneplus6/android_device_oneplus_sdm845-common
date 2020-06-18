@@ -15,7 +15,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
