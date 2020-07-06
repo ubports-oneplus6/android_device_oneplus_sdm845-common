@@ -139,11 +139,11 @@ PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
 
 # Update engine
-PRODUCT_PACKAGES += \
-    brillo_update_payload \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
+#PRODUCT_PACKAGES += \
+#    brillo_update_payload \
+#    update_engine \
+#    update_engine_sideload \
+#    update_verifier
 
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.sdm845 \
