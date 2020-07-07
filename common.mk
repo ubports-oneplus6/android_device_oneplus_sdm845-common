@@ -44,8 +44,8 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
+#PRODUCT_PACKAGES += \
+#    AntHalService
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -60,8 +60,8 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
+#PRODUCT_PACKAGES += \
+#    Snap
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -76,12 +76,12 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0
 
 # Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
+#PRODUCT_PACKAGES += \
+#    OnePlusDoze
 
 # HotwordEnrollement app permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -109,57 +109,64 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0:64 \
     android.hardware.nfc@1.1:64 \
     android.hardware.secure_element@1.0:64 \
-    com.android.nfc_extras \
-    Tag \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
+#    com.android.nfc_extras \
+#    Tag \ #Not sure if this is java, couldn't find anything online
 
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+TARGET_PROVIDES_QTI_TELEPHONY_JAR = true
+# https://github.com/LineageOS/android_hardware_lineage_telephony am I doing it good?
+
+#PRODUCT_PACKAGES += \
+#    telephony-ext
+
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # Touch
 PRODUCT_PACKAGES += \
     lineage.touch@1.0-service.oneplus_sdm845
 
 # tri-state-key
-PRODUCT_PACKAGES += \
-    KeyHandler \
-    tri-state-key_daemon
+
+# Not sure if java, tri-state-key_deamon doesn't look like java. TODO: Check and enable.
+#PRODUCT_PACKAGES += \
+#    KeyHandler \
+#    tri-state-key_daemon
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    lineage.trust@1.0-service
+#PRODUCT_PACKAGES += \
+#    lineage.trust@1.0-service
 
 # Update engine
+# I've commented everything, it was not needed, right?
 #PRODUCT_PACKAGES += \
 #    brillo_update_payload \
 #    update_engine \
 #    update_engine_sideload \
 #    update_verifier
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.sdm845 \
-    libcutils \
-    libgptutils \
-    libz \
+#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+#    bootctrl.sdm845 \
+#    libcutils \
+#    libgptutils \
+#    libz \
 
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
+#PRODUCT_PACKAGES_DEBUG += \
+#    update_engine_client
 
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:system/etc/permissions/privapp-permissions-wfd.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:system/etc/permissions/privapp-permissions-wfd.xml
