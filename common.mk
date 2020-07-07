@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
 
 # Telephony
 
-TARGET_PROVIDES_QTI_TELEPHONY_JAR = true
+# TARGET_PROVIDES_QTI_TELEPHONY_JAR = true
 # https://github.com/LineageOS/android_hardware_lineage_telephony am I doing it good?
 
 #PRODUCT_PACKAGES += \
