@@ -118,7 +118,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware
 
 # Telephony
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+#TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
