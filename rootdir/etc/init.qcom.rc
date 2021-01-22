@@ -22,3 +22,7 @@ service dashd /sbin/dashd
 
 service factory-hal-1-0 /system/bin/true
     disabled
+
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service_HYBRIS_DISABLED
+    disabled
+    override
